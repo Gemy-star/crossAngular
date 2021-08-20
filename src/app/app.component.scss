@@ -1,0 +1,18 @@
+@import "./variables";
+@import "./mixinis";
+
+.car-container{
+  width: 100%;
+  height:   564vh;
+  margin: 0 auto;
+  padding: 0;
+  background-color: $back-color !important;
+  @include breakpoint-down(medium){
+    height: 830vh;
+  }
+  @include breakpoint-down(small){
+    height: 808vh !important;
+  }
+}
+
+
