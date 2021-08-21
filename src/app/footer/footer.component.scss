@@ -8,7 +8,7 @@
   flex-direction:row;
   justify-content:space-between;
   align-content: baseline;
-  margin-block-start: 6rem;
+  margin-block-start: auto;
   min-width: fit-content;
   border-radius:2.5rem;
   @include breakpoint-down(medium){
