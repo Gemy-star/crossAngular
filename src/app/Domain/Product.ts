@@ -8,8 +8,8 @@ export interface Product
 }
 
 export enum ProductType {
-  Basic = 1,
-  Premium
+  Basic = "Basic",
+  Premium ="Premium"
 }
 
 

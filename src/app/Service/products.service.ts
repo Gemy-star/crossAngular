@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Product, ProductType} from "../Domain/Product";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'any'
 })
 export class ProductsService {
   Products:Product[] = [];
@@ -22,7 +22,7 @@ export class ProductsService {
         ProductType: ProductType.Premium
       },
       {
-        Id:1 ,
+        Id:3 ,
         Name:"Grey T-shirt" ,
         Amount:3 ,
         Description:"Nice T-shirt",
@@ -37,11 +37,31 @@ export class ProductsService {
   addProduct (Product : Product) {
     this.Products.push(Product);
   }
+  findIndexById(id: number | undefined): number {
+    let index = -1;
+    for (let i = 0; i < this.Products.length; i++) {
+      if (this.Products[i].Id === id) {
+        index = i;
+        break;
+      }
+    }
 
+    return index;
+  }
+setProducts(products:Product[]) {
+  this.Products = products;
+}
+  createId(): number {
+     let id = this.Products.length + 2 ;
+     return id;
+  }
   RemoveProduct (Product : Product) {
     this.Products =  this.Products.filter(x => x.Id == Product.Id);
   }
   getProductById(id:number){
     return this.Products.find(x => x.Id == id);
+  }
+  editProduct(product : Product) {
+    this.Products[this.findIndexById(product.Id)] = product;
   }
 }
