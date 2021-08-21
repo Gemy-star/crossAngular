@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "Id":1 ,
+      "Name":"Black T-shirt" ,
+      "Amount":3 ,
+      "Description":"Nice T-shirt",
+      "ProductType": 1
+    },
+    {
+      "Id":2 ,
+      "Name":"Navy T-shirt" ,
+      "Amount":3 ,
+      "Description":"Nice T-shirt",
+      "ProductType": 1
+    },
+    {
+      "Id":3 ,
+      "Name":"Blue T-shirt" ,
+      "Amount":3 ,
+      "Description":"Nice T-shirt",
+      "ProductType": 2
+    }
+  ]
+}

@@ -2,6 +2,7 @@
 @import "../mixinis";
 
 .header{
+  min-width: fit-content;
   border-radius: 3.5rem;
   position: relative;
   z-index: 99;
@@ -22,6 +23,7 @@
   &_btn{
     margin-inline: 4.3rem;
     margin-block: 0.7rem;
+    display:flex;
     @include breakpoint-down(small){
       margin-inline: 0.3rem;
       margin-block: 0.5rem;
@@ -34,20 +36,21 @@
        border-radius:2.313rem;
        cursor: pointer;
        border: none;
-       background-color: $header_backColor;
+       background-color: $header_backColor !important;
        line-height: 65px;
        box-shadow:0 16px 40px rgba(0,0,0,0.12);border:0;;
        @include breakpoint-down(small){
-         width: 4.8125rem;
+         width: 3.8125rem;
          height: 2.25rem;
        }
        &:hover{
-         background-color: $white;
+         background-color: $back-color ;
        }
        p{
          margin: 0.2rem;
          font-family: $font-family;
-         @extend .txt
+         @extend .txt;
+
        }
      }
   }
@@ -66,3 +69,4 @@ margin-inline: 0.7rem;
 
   }
 }
+

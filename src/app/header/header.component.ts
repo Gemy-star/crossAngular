@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-title : string = 'العربية';
+title : string = 'المنتجات';
+  Home : string = 'الرئيسية';
+
   constructor() { }
 
   ngOnInit(): void {
